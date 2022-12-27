@@ -1,0 +1,16 @@
+﻿.bg--primary {
+    background-color: #020202;
+}
+
+.text-primary{
+    color:white !important;
+}
+
+.nav-text-primary {
+    color: white !important;
+    padding-bottom:3rem;
+}
+
+ .nav-text-primary:hover {
+     font-size:1.8rem;
+    }

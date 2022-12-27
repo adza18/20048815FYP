@@ -1,0 +1,9 @@
+﻿
+@import url('site.css');
+
+
+.main--footer{
+    background-color:var(--colorSecondarys2);
+    padding:5rem;
+   
+}

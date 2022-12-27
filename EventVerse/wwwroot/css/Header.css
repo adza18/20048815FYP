@@ -1,0 +1,67 @@
+﻿@import url('site.css');
+
+.header-wrapper {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.offcanvas-backdrop, .modal-backdrop {
+    z-index: 4 !important;
+}
+
+.modal {
+    z-index: 6 !important;
+}
+
+.button-close {
+    border: transparent;
+    background-color: transparent;
+}
+
+.offcanvas-body {
+    margin-top: 2rem;
+}
+
+    .offcanvas-body .menuList {
+        text-align: right;
+    }
+
+        .offcanvas-body .menuList ul {
+            list-style-type: none;
+        }
+
+            .offcanvas-body .menuList ul li {
+                padding-top: 2rem;
+                cursor: pointer;
+            }
+
+            .offcanvas-body .menuList ul .active_link {
+                font-size: 1.6rem;
+            }
+
+            .offcanvas-body .menuList ul li:hover {
+                font-size: 2.8rem;
+            }
+
+.offcanvas-custom {
+    background-color: var(--colorSecondarys2) !important;
+    width: 30rem !important;
+    color: var(--colorPrimarys2);
+    font-size: 2.3rem;
+    z-index: 5 !important;
+}
+
+.menu-header 
+{
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.menu-header a:hover{
+    color:red;
+}

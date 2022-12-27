@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EventVerse</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EventVerse.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Header.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Buttons.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Modifiers.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Footer.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Typography.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+
+</head>
+<body>
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-wrapper">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-3 fs--normal">
+                <a class="menu-header txtWhite"
+                   data-bs-toggle="offcanvas"
+                   href="#menuToggle"
+                   role="button"
+                   aria-controls="menuToggle">
+                    <i class="bi bi-menu-button-wide text-white"></i>
+                    <span class="ms-3 text-white">MENU</span>
+                </a>
+                <div class="offcanvas offcanvas-start offcanvas-custom"
+                     tabindex="-1"
+                     id="menuToggle"
+                     aria-labelledby="menuToggleLabel">
+                    <div class="offcanvas-header d-flex justify-content-end">
+                        <button type="button"
+                                class="text-reset button-close"
+                                data-bs-dismiss="offcanvas"
+                                aria-label="Close">
+                            <i class="bi bi-x-lg txt-primary"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav class="menuList">
+                            <ul class="text-primary">
+                                <a class="nav-link nav-text-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                <a class="nav-link nav-text-primary" asp-area="" asp-controller="Home" asp-action="Privacy">Event</a>
+                                <a class="nav-link nav-text-primary" asp-area="" asp-controller="Home" asp-action="Gallery">Gallery</a>
+                                <a class="nav-link nav-text-primary" asp-area="" asp-controller="Home" asp-action="Merch">Merch</a>
+                                <a class="nav-link nav-text-primary" asp-area="" asp-controller="Home" asp-action="Merch">Organize</a>
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="col-6 d-flex justify-content-center">
+                <div class="fs--heading-1 text-white  d-none d-sm-block">
+                    EventVerse
+                </div>
+
+            </div>
+            <div class="col-3 ">
+                <div class="d-flex justify-content-end">
+                    <div class="pe-3">
+                        <button class="btn-main btn-main-fill fs--small" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" type="button">Sign in</button>
+
+
+                    </div>
+                    <div>
+                        <button type="button"
+                                class="btn-main btn-main-outline fs--small"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModalToggle2">
+                            Sign up
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div class=" main--footer text-white fs--medium">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 fs--heading-2 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-instagram"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-facebook"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-twitter"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

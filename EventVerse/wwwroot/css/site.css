@@ -1,0 +1,36 @@
+
+
+:root {
+    --colorPrimarys1: #66FCF1;
+    --colorPrimarys2: white;
+    --colorSecondarys1: #0B0C10;
+    --colorSecondarys2: black;
+    --colorTertiary: #C5C6C7;
+    --colorWhite: rgb(222, 222, 222);
+}
+
+
+/*@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}*/
+
+/*html {
+  position: relative;
+  min-height: 100%;
+}
+*/
+
+html {
+    font-size: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x:hidden;
+}
