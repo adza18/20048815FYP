@@ -36,14 +36,14 @@ namespace EventVerse.Areas.Identity.Pages.Account
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
-        {
-            _userManager = userManager;
-            _userStore = userStore;
-            _emailStore = GetEmailStore();
-            _signInManager = signInManager;
-            _logger = logger;
-            _emailSender = emailSender;
-        }
+            {
+                _userManager = userManager;
+                _userStore = userStore;
+                _emailStore = GetEmailStore();
+                _signInManager = signInManager;
+                _logger = logger;
+                _emailSender = emailSender;
+            }
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
