@@ -1,0 +1,11 @@
+﻿/*body {
+    overflow:hidden;
+}*/
+.main-section{
+    height:100vh;
+    overflow-y:scroll;
+    background-color:lightsalmon;
+}
+.side-section{
+    background-color:cornflowerblue;
+}
