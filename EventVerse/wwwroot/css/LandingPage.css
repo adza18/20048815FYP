@@ -217,6 +217,29 @@ h1 {
     /*transform: translate(10px, 15px);*/
 }
 
+.img-card{
+    height:20rem;
+    position:relative;
+
+}
+
+    .img-card img {
+        border-radius: 0.7rem;
+        width:100%;
+    }
+
+.img-card:hover img{
+    transform:scale(1.05);
+}
+.genre-text
+{
+    position:absolute;
+    left:20px;
+    bottom:5px;
+    color:white;
+    font-weight:400;
+}
+
 .events {
     background-color: antiquewhite;
     padding-top: 2rem;

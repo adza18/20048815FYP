@@ -1,11 +1,18 @@
-﻿/*body {
-    overflow:hidden;
-}*/
+﻿@import url('site.css');
+
 .main-section{
     height:100vh;
     overflow-y:scroll;
-    background-color:lightsalmon;
+    border:2px solid black;
+   /* background-color:var(--colorSecondarys2);
+    color:var(--colorPrimarys2);*/
 }
+
+.card img{
+    height:200px;
+    object-fit:cover;
+}
+
 .side-section{
-    background-color:cornflowerblue;
+    /*background-color:cornflowerblue;*/
 }
