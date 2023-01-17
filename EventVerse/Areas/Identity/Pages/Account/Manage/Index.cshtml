@@ -7,9 +7,16 @@
 
 <h3>@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
+<div class="container p-5">
 <div class="row">
+    @if(!string.IsNullOrEmpty(Model.Input.ProfilePicture))
+    {
     <div class="col-md-6">
-        <form id="profile-form" method="post">
+        <img src="/Uploads/@Model.Input.ProfilePicture" style="width:250px;height:300px"/>
+     </div>   
+    }
+    <div class="col-md-6">
+        <form id="profile-form" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-floating">
                 <input asp-for="Username" class="form-control" disabled />
@@ -20,10 +27,17 @@
                 <label asp-for="Input.PhoneNumber" class="form-label"></label>
                 <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
             </div>
+            <div class="form-floating mb-3">
+                    <label for="ProfilePicture" class="form-label">Profile picture</label>
+                    <input asp-for="Input.ImageFile"/>
+             </div>
+
             <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
         </form>
     </div>
 </div>
+</div>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

@@ -1,9 +1,15 @@
-﻿.bg--primary {
+﻿@import url('site.css');
+
+.bg--primary {
     background-color: #020202;
 }
 
 .text-primary{
     color:white !important;
+}
+
+.text-secondary {
+    color: var(--colorPrimarys1) !important;
 }
 
 .nav-text-primary {

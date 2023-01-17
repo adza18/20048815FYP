@@ -67,7 +67,7 @@
     </div>
     <div class="header-wrapper">
         <div class="row justify-content-between align-items-center">
-            <div class="col-3 fs--normal">
+            <div class="col-6 col-md-3 fs--normal">
                 <a class="menu-header txtWhite"
                    data-bs-toggle="offcanvas"
                    href="#menuToggle"
@@ -91,7 +91,7 @@
                     <div class="offcanvas-body">
                         <nav class="menuList">
                             <ul class="text-primary">
-                                <a class="nav-link nav-text-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                              <a class="nav-link nav-text-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                                 <a class="nav-link nav-text-primary" asp-area="" asp-controller="Event" asp-action="Index">Event</a>
                                 <a class="nav-link nav-text-primary" asp-area="" asp-controller="Post" asp-action="Index">Post</a>
                                 <a class="nav-link nav-text-primary" asp-area="" asp-controller="Home" asp-action="Merch">Merch</a>
@@ -107,14 +107,14 @@
 
 
             </div>
-            <div class="col-6 d-flex justify-content-center">
-                <div class="fs--heading-1 text-white  d-none d-sm-block">
-                    EventVerse
+            <div class="col-0 col-md-6 d-flex justify-content-center">
+                <div class="fs--heading-1 text-white  d-none d-md-block">
+                    <a  asp-area="" asp-controller="Home" asp-action="Index">EventVerse</a>
                 </div>
 
             </div>
-            <div class="col-3 ">
-                <div class="d-flex justify-content-end">
+            <div class="col-6 col-md-3 ">
+              @*  <div class="d-flex justify-content-end">
                     <div class="pe-3">
                         <button class="btn-main btn-main-fill fs--small" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" type="button">Sign in</button>
 
@@ -128,7 +128,8 @@
                             Sign up
                         </button>
                     </div>
-                </div>
+                </div>*@
+                <partial name="_LoginPartial"/>
             </div>
 
 

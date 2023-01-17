@@ -1,21 +1,22 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using EventVerse.Areas.Identity.Data;
+using EventVerse.Core.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 namespace EventVerse.Data;
 
-public class EventVerseContext : IdentityDbContext<IdentityUser>
+public class EventVerseContext : IdentityDbContext<ApplicationUser>
 {
     public EventVerseContext(DbContextOptions<EventVerseContext> options)
         : base(options)
     {
     }
 
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-        base.OnModelCreating(builder);
-        // Customize the ASP.NET Identity model and override the defaults if needed.
-        // For example, you can rename the ASP.NET Identity table names and more.
-        // Add your customizations after calling base.OnModelCreating(builder);
-    }
+    public DbSet<Merchandise> Merchandises { get; set; }
+
+   
 }
+
