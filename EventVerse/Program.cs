@@ -23,7 +23,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 builder.Services.AddScoped<IFileService, FileService>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-//builder.Services.AddTransient<IEmailSender, EmailSenderCustom>();
+builder.Services.AddTransient<IEmailSender, EmailSenderCustom>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

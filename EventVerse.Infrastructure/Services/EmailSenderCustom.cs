@@ -15,23 +15,23 @@ namespace EventVerse.Infrastructure.Services
         {
           ;
 
-            //MailMessage message = new MailMessage();
-            //SmtpClient smtpClient = new SmtpClient();
-            //message.From = new MailAddress("ad.tech");
-            //message.To.Add(email);
-            //message.Subject = subject;
-            //message.IsBodyHtml = true;
-            //message.Body = htmlMessage;
-            //smtpClient.Port = 587;
-            //smtpClient.Host = "smtpt.sippl.com";
-            //smtpClient.EnableSsl = true;
-            //smtpClient.UseDefaultCredentials = false;
-            //smtpClient.Credentials = new NetworkCredential("u", "p");
-            //smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            //smtpClient.Send(message);
+            MailMessage message = new MailMessage();
+            SmtpClient smtpClient = new SmtpClient();
+            message.From = new MailAddress("ad@tech.com");
+            message.To.Add(email);
+            message.Subject = subject;
+            message.IsBodyHtml = true;
+            message.Body = htmlMessage;
+            smtpClient.Port = 587;
+            smtpClient.Host = "smtpt.sippl.com";
+            smtpClient.EnableSsl = true;
+            smtpClient.UseDefaultCredentials = false;
+            smtpClient.Credentials = new NetworkCredential("u", "p");
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtpClient.Send(message);
 
 
-          
+
         }
     }
 }
