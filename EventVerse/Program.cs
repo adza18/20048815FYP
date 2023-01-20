@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using EventVerse.Data;
 using EventVerse.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using EventVerse.Infrastructure.Services;
 using EventVerse.Application.Interfaces.Services;
+using EventVerse.Infrastructure.Services;
+using EventVerse.Infrastructure.Persistence;
+using EventVerse.Core.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("EventVerseContextConnection") ?? throw new InvalidOperationException("Connection string 'EventVerseContextConnection' not found.");
@@ -12,10 +13,7 @@ var connectionString = builder.Configuration.GetConnectionString("EventVerseCont
 builder.Services.AddDbContext<EventVerseContext>(options =>
     options.UseSqlServer(connectionString));
 
-//builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-//    .AddEntityFrameworkStores<EventVerseContext>();
-
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<EventVerseContext>()
     .AddDefaultUI()
     .AddDefaultTokenProviders();
@@ -46,4 +44,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
 app.Run();

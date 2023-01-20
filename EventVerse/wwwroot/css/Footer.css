@@ -5,5 +5,8 @@
 .main--footer{
     background-color:var(--colorSecondarys2);
     padding:5rem;
+    width:100%;
+    /*position:absolute;
+    bottom:0;*/
    
 }

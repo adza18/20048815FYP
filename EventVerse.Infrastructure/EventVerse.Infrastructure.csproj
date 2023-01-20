@@ -7,24 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\EmailSender.cs" />
+    <Compile Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
-    <Folder Include="NewFolder\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Persistence\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Context\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Castle.Core" Version="5.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EventVerse.Application\EventVerse.Application.csproj" />
+    <ProjectReference Include="..\EventVerse.Core\EventVerse.Core.csproj" />
   </ItemGroup>
 
 </Project>

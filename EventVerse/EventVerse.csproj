@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EventVerse.Application\EventVerse.Application.csproj" />
     <ProjectReference Include="..\EventVerse.Core\EventVerse.Core.csproj" />
     <ProjectReference Include="..\EventVerse.Infrastructure\EventVerse.Infrastructure.csproj" />
   </ItemGroup>

@@ -14,5 +14,11 @@ namespace EventVerse.Core.Entities
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
+        public int Stock { get; set; }
+        public int Price { get; set; }
+
+        public MerchVariant MerchVariant { get; set; }
+
+
     }
 }

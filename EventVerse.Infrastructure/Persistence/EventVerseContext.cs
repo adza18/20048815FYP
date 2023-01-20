@@ -1,12 +1,10 @@
-﻿using EventVerse.Areas.Identity.Data;
-using EventVerse.Core.Entities;
-using Microsoft.AspNetCore.Identity;
+﻿using EventVerse.Core.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+namespace EventVerse.Infrastructure.Persistence;
 
-namespace EventVerse.Data;
+
 
 public class EventVerseContext : IdentityDbContext<ApplicationUser>
 {
@@ -17,6 +15,7 @@ public class EventVerseContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<Merchandise> Merchandises { get; set; }
 
-   
+
+
 }
 

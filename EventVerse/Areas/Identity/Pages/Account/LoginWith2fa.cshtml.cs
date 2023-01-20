@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using EventVerse.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
+using EventVerse.Core.Entities;
 
 namespace EventVerse.Areas.Identity.Pages.Account
 {

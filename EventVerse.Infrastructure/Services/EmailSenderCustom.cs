@@ -15,19 +15,23 @@ namespace EventVerse.Infrastructure.Services
         {
           ;
 
+            string fromMail = "adrizaacharya4@gmail.com";
+            string fromPassword = "gihfhnnidwyxoxoh";
+
+
             MailMessage message = new MailMessage();
-            SmtpClient smtpClient = new SmtpClient();
-            message.From = new MailAddress("ad@tech.com");
-            message.To.Add(email);
+            message.From = new MailAddress(fromMail);
             message.Subject = subject;
+            message.To.Add(new MailAddress(email));
+            message.Body = "<html><body> " + htmlMessage + " </body></html>";
             message.IsBodyHtml = true;
-            message.Body = htmlMessage;
-            smtpClient.Port = 587;
-            smtpClient.Host = "smtpt.sippl.com";
-            smtpClient.EnableSsl = true;
-            smtpClient.UseDefaultCredentials = false;
-            smtpClient.Credentials = new NetworkCredential("u", "p");
-            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+            var smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential(fromMail, fromPassword),
+                EnableSsl = true,
+            };
             smtpClient.Send(message);
 
 

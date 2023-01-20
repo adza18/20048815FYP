@@ -21,6 +21,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using System.Net.Mail;
 using System.Net;
+using EventVerse.Core.Enums;
+using EventVerse.Core.Entities;
 
 namespace EventVerse.Areas.Identity.Pages.Account
 {
@@ -79,6 +81,7 @@ namespace EventVerse.Areas.Identity.Pages.Account
             public string? FirstName { get; set; }
             public string? LastName { get; set; }
 
+
             /// </summary>
             [Required]
             [EmailAddress]
@@ -128,6 +131,7 @@ namespace EventVerse.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    //await _userManager.AddToRoleAsync(user,Roles.Admin.ToString());
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
